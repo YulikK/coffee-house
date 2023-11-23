@@ -46,7 +46,12 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
+      filename: 'index.html',
       template: './src/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'menu.html',
+      template: './src/menu.html',
     }),
     new CopyWebpackPlugin({
       patterns: [
