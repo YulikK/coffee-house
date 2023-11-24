@@ -1,0 +1,33 @@
+.page-main {
+  margin: 0 40px;
+}
+
+.page-main__block {
+  background: url("../img/png/img-hero.png") lightgray 50% / cover no-repeat;
+  border-radius: 40px;
+  padding: 100px;
+}
+
+.page-main__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 530px;
+}
+
+.page-main__head {
+  @include font-head1();
+  color: $color-text-light;
+  margin: 0px;
+}
+
+.page-main__text-accent {
+  color: $color-text-accent;
+  @include font-accent();
+}
+
+.page-main__description {
+  @include font-body-medium();
+  color: $color-text-light;
+  margin: 1px;
+}

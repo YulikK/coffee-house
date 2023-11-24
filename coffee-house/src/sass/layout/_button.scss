@@ -1,0 +1,48 @@
+.button {
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.button--primary {
+  @include font-caption();
+  width: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: block;
+  text-align: center;
+  background-color: $color-bg-body;
+  
+  .button-title {
+    display: inline-block;
+    position: relative;
+    transition: all .5s ease;
+    
+  
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      opacity: 0;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      right: -34px;
+      transition: all .1s ease 0s;
+    }
+  }
+  
+  &:hover {
+
+    .button-title {
+      &::after {
+        margin: 0px 8px;
+        width: 20px;
+        height: 20px;
+        background-image: url("../img/svg/coffee-cup.svg");
+        opacity: 1;
+      }
+    }
+  }
+  
+}
