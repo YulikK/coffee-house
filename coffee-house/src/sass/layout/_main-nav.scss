@@ -1,0 +1,34 @@
+.main-nav {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.main-nav__list {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+}
+
+.main-nav__item {
+  @include font-caption();
+  cursor: pointer;
+  padding-bottom: 4px;
+}
+
+.main-nav__menu {
+  @include font-caption();
+  width: 72px;
+  height: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav__menu-logo {
+  align-self: flex-start;
+  width: 20px;
+  height: 20px;
+}

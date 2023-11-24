@@ -1,0 +1,45 @@
+@mixin font-head1(){
+  font-family: $font-stack;
+  font-size: 72px;
+  font-weight: 600;
+}
+
+@mixin font-accent(){
+  font-style: italic;
+}
+
+@mixin font-head2(){
+  font-family: $font-stack;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+@mixin font-head3(){
+  font-family: $font-stack;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+@mixin font-body-medium(){
+  font-family: $font-stack;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@mixin font-body-medium(){
+  font-family: $font-stack;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+@mixin font-caption(){
+  font-family: $font-stack;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@mixin font-link(){
+  font-family: $font-stack;
+  font-size: 32px;
+  font-weight: 600;
+}

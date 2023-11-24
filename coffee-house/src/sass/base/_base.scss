@@ -1,0 +1,23 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+  @include font-body-medium();
+  background-color: $color-bg-body;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: $max-width;
+  max-width: $max-width;
+}
+
+ul {
+margin: 0;
+}
