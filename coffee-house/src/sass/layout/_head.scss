@@ -1,0 +1,4 @@
+.head__text-accent {
+  color: $color-text-accent;
+  @include font-accent();
+}

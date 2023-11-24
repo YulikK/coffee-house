@@ -11,6 +11,7 @@ a {
 body{
   @include font-body-medium();
   background-color: $color-bg-body;
+  color: $color-text-dark;
   width: 100%;
   margin: 0;
   padding: 0;

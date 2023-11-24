@@ -21,11 +21,6 @@
   margin: 0px;
 }
 
-.page-main__text-accent {
-  color: $color-text-accent;
-  @include font-accent();
-}
-
 .page-main__description {
   @include font-body-medium();
   color: $color-text-light;

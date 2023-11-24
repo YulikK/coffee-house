@@ -37,7 +37,7 @@
   <main class="page-main">
     <div class="page-main__block">
       <div class="page-main__wrapper">
-        <h1 class="page-main__head"><span class="page-main__text-accent">Enjoy</span> premium coffee at our charming cafe</h1>
+        <h1 class="page-main__head"><span class="head__text-accent">Enjoy</span> premium coffee at our charming cafe</h1>
         <p class="page-main__description">With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
         <a class="page-main__button button button--primary" href="menu.html">
           <span class="button-title">Menu</span>
@@ -45,22 +45,39 @@
       </div>
     </div>
     <section class="favorite">
-      <h2 class="favorite__head">Choose your favorite coffee</h2>
+      <h2 class="favorite__head">Choose your <span class="head__text-accent">favorite</span> coffee</h2>
       <div class="favorite__slider">
-        <a class="favorite__before button button--arrow" href=""></a>
-        <a class="favorite__card" href="">
-          <img class="favorite__image" src="img/png/coffee-slider-1.png" alt="S’mores Frappuccino">
-          <h3 class="favorite__name">S’mores Frappuccino</h3>
+        <a class="favorite__before button button--arrow" href="#">
+          <svg class="button--arrow-left" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path id="arrow-left" viewBox="0 0 24 24" d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </a>
-        <a class="favorite__after button button--arrow" href=""></a>
-        <p class="favorite__description">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-        <p class="favorite__price">$5.50</p>
+        <div class="favorite__card-wrapper">
+          <a class="favorite__card" href="">
+            <img class="favorite__image" src="img/png/coffee-slider-1.png" width="480px" height="480px" alt="S’mores Frappuccino">
+            <h3 class="favorite__name">S’mores Frappuccino</h3>
+            <p class="favorite__description">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+            <p class="favorite__price">$5.50</p>
+          </a>
+        </div>
+        <a class="favorite__after button button--arrow" href="">
+          <svg class="button--arrow-right" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <g id="arrow-right"><path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/></g>
+          </svg>
+        </a>
       </div>
       <div class="favorite__controls">
-        <a class="favorite__control-items button button--control-items" href=""></a>
-        <a class="favorite__control-items button button--control-items" href=""></a>
-        <a class="favorite__control-items button button--control-items" href=""></a>
-      </div>
+            
+        <input id="card-item-1" type="radio" name="controls" checked/>
+        <label for="card-item-1" class="favorite__control-items button button--control-items"></label>
+      
+        <input id="card-item-2" type="radio" name="controls"/>
+        <label for="card-item-2" class="favorite__control-items button button--control-items"></label>
+      
+        <input id="card-item-3" type="radio" name="controls"/>
+        <label for="card-item-3" class="favorite__control-items button button--control-items"></label>
+      
+    </div>
     </section>
     <section class="about">
       <h2 class="about__head">Resource is the perfect and cozy place where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.</h2>
