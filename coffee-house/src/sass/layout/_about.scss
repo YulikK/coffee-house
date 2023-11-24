@@ -1,0 +1,16 @@
+.about__head {
+  @include font-head2();
+  margin-bottom: 38px;
+}
+
+.about__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 660px);
+  // grid-template-rows: 430px 160px 430px;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  grid-template-areas: 
+            "photo1 photo3"
+            "photo1 photo4"
+            "photo2 photo4";
+}
