@@ -1,0 +1,44 @@
+.contact {
+  background-color: $color-bg-container;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px;
+  margin: 100px 40px 40px 40px;
+}
+
+.contact__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 530px;
+  gap: 40px;
+}
+
+.contact__header {
+  @include font-head2();
+  color: $color-text-light;
+  margin: 0;
+}
+
+.contact__title {
+  @include font-head3();
+  color: $color-text-light;
+  margin: 0;
+}
+
+.contact__list {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.contact__item {
+  display: flex;
+  gap: 8px;
+}
+
+.contact__item-title {
+  @include font-caption();
+  color: $color-text-light;
+  margin: 0;
+}
