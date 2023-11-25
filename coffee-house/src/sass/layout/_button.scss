@@ -1,6 +1,7 @@
 .button {
   border-radius: 100px;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .button--primary {
@@ -84,4 +85,25 @@
 
 input:checked + .button--control-items{
   background:  $color-border-dark; 
+}
+
+.button--app {
+  width: 200px;
+  border: 1px solid $color-border-dark;
+  transition: all .5s ease;
+  padding: 12px 20px;
+
+  svg path{
+    fill: $color-text-dark;
+  }
+
+  &:hover {
+    background-color: $color-bg-container;
+    color: $color-text-light;
+    transition: all .5s ease;
+
+    svg path{
+      fill: $color-text-light;
+    }
+  }
 }

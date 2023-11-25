@@ -1,0 +1,49 @@
+.mobile-app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0;
+}
+
+.mobile-app__wrapper {
+  width: 630px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-app__header {
+  @include font-head2();
+  margin: 0;
+}
+
+.mobile-app__description {
+  @include font-body-medium();
+  margin: 40px 0;
+}
+
+.mobile-app__button-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.mobile-app__download {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+}
+
+.mobile-app__caption-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-app__caption {
+  @include font-body-caption();
+}
+
+.mobile-app__store {
+  @include font-caption();
+}
