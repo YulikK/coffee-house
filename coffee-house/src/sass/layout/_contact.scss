@@ -37,6 +37,16 @@
   gap: 8px;
 }
 
+.contact__item-img {
+  width: 20px;
+  height: 20px;
+}
+
+.contact__link {
+  display: flex;
+  gap: 8px;
+}
+
 .contact__item-title {
   @include font-caption();
   color: $color-text-light;
