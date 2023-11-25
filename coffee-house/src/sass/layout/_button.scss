@@ -137,3 +137,22 @@ input:checked + .button--control-items{
     }
   }
 }
+
+.button--filter {
+  border: 1px solid $color-border-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 6px 6px;
+
+  .filter__icon {
+    padding: 3px 7px;
+    border-radius: 100px;
+    background: $color-border-light;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+  }
+}
+

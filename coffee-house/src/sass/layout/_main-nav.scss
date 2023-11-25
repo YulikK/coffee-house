@@ -13,7 +13,7 @@
   padding: 0;
 }
 
-.main-nav__link {
+.main-nav__link:not(.main-nav__menu--active) {
   @include font-caption();
   cursor: pointer;
   padding-bottom: 4px;
@@ -36,8 +36,25 @@
     &::after {
       width: 100%;
       left: 0;
-      // transition: all 0.5s;
     }
+  }
+}
+
+.main-nav__menu--active {
+  @include font-caption();
+  padding-bottom: 4px;
+  position: relative;
+  cursor: default;
+  color: $color-text-dark;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    border-bottom: 2px solid $color-text-dark;
   }
 }
 
@@ -47,6 +64,9 @@
   height: 28px;
   display: flex;
   justify-content: space-between;
+}
+
+.main-nav__menu--active {
 }
 
 .main-nav__menu-logo {

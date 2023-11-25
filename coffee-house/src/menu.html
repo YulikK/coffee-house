@@ -9,49 +9,50 @@
   <title>Coffee house</title>
 </head>
 <body>
-  <header class="page-header page-header--index">
-    <a class="page-header__logo">
+  <header class="page-header">
+    <a class="page-header__logo" href="index.html">
       <img src="img/svg/logo.svg" width="100" height="60" alt="COFFEE-HOUSE">
     </a>
     <nav class="main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">Favorite coffee</a>
+          <a class="main-nav__link" href="index.html#favorite">Favorite coffee</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">About</a>
+          <a class="main-nav__link" href="index.html#about">About</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">Mobile app</a>
+          <a class="main-nav__link" href="index.html#app">Mobile app</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">Contact us</a>
-        </li>
-        <li class="main-nav__item main-nav__item--active">
-          <a class="main-nav__link" href="">Menu</a>
+          <a class="main-nav__link" href="index.html#contact">Contact us</a>
         </li>
       </ul>
+      <a class="main-nav__link main-nav__menu main-nav__menu--active">
+        <span>Menu</span>
+        <img class="main-nav__menu-logo" src="img/svg/coffee-cup.svg" width="20" height="20" alt="coffee cup">
+      </a>
     </nav>
   </header>
-  <main class="page-main">
-    <div class="page-main__wrapper">
-      <h1 class="page-main__head main-head">Behind each of our cups hides an amazing surprise</h1>
-      <ul class="page-main__filtet filter">
+  <main class="page-menu">
+    <div class="page-menu__wrapper">
+      <h1 class="page-menu__head menu-head">Behind each of our cups hides an <span class="head__text-accent">amazing surprise</span></h1>
+      <ul class="page-menu__filtet filter">
         <li class="filter__item filter__item--active">
-          <a href="filter__button button button--filter">
-            <img class="filter__icon" src="img/svg/coffee.svg" alt="filter: coffee">
+          <a class="filter__button button button--filter">
+            <img class="filter__icon" src="img/svg/coffee.svg" width="16" height="24" alt="filter: coffee">
             <p class="filter__title">Coffee</p>
           </a>
         </li>
         <li class="filter__item">
-          <a href="filter__button button button--filter">
-            <img class="filter__icon" src="img/svg/tea.svg" alt="filter: tea">
+          <a class="filter__button button button--filter">
+            <img class="filter__icon" src="img/svg/tea.svg" width="16" height="24" alt="filter: tea">
             <p class="filter__title">Tea</p>
           </a>
         </li>
         <li class="filter__item">
-          <a href="filter__button button button--filter">
-            <img class="filter__icon" src="img/svg/desert.svg" alt="filter: desert">
+          <a class="filter__button button button--filter">
+            <img class="filter__icon" src="img/svg/desert.svg" width="16" height="24" alt="filter: desert">
             <p class="filter__title">Dessert</p>
           </a>
         </li>
