@@ -9,10 +9,14 @@
   width: 200px;
   padding-top: 20px;
   padding-bottom: 20px;
-  display: block;
-  text-align: center;
   background-color: $color-bg-body;
   
+  .button--primary-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .button-title {
     display: inline-block;
     position: relative;
@@ -21,27 +25,30 @@
   
     &::after {
       content: "";
-      display: inline-block;
-      position: absolute;
       opacity: 0;
       width: 20px;
       height: 20px;
       background-repeat: no-repeat;
       background-position: center center;
-      right: -34px;
-      transition: all .1s ease 0s;
+      background-image: url("../img/svg/coffee-cup.svg");
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: all .5s ease;
     }
   }
   
   &:hover {
 
+    transition: all .5s ease;
+
     .button-title {
+      padding-right: 25px;
       &::after {
-        margin: 0px 8px;
-        width: 20px;
-        height: 20px;
-        background-image: url("../img/svg/coffee-cup.svg");
         opacity: 1;
+        right: 0;
+        transition: all .5s ease;
       }
     }
   }
