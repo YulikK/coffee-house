@@ -13,10 +13,32 @@
   padding: 0;
 }
 
-.main-nav__item {
+.main-nav__link {
   @include font-caption();
   cursor: pointer;
   padding-bottom: 4px;
+  position: relative;
+  color: $color-text-dark;
+  
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    left: 50%;
+    border-bottom: 2px solid $color-text-dark;
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+      left: 0;
+      // transition: all 0.5s;
+    }
+  }
 }
 
 .main-nav__menu {
