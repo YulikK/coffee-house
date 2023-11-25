@@ -145,6 +145,7 @@ input:checked + .button--control-items{
   align-items: center;
   gap: 8px;
   padding: 8px 16px 6px 6px;
+  transition: all 0.5s;
 
   .filter__icon {
     padding: 3px 7px;
@@ -153,6 +154,26 @@ input:checked + .button--control-items{
     width: 30px;
     height: 30px;
     box-sizing: border-box;
+    transition: all 0.5s;
+  }
+
+  &:hover:not(.button--filter-active) {
+    background: $color-bg-container;
+    color: $color-text-light;
+
+    .filter__icon {
+      background: $color-bg-body;
+    }
+  }
+}
+
+.button--filter-active {
+  background: $color-bg-container;
+  color: $color-text-light;
+  cursor: default;
+
+  .filter__icon {
+    background: $color-bg-body;
   }
 }
 
