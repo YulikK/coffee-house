@@ -48,6 +48,25 @@
 .contact__link {
   display: flex;
   gap: 8px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    left: 50%;
+    border-bottom: 2px solid $color-text-light;
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+      left: 0;
+    }
+  }
 }
 
 .contact__item-title {
