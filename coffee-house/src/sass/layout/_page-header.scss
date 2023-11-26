@@ -1,5 +1,7 @@
 .page-header {
-  margin: 20px 40px;
+  width: $max-width;
+  // margin: 20px 40px;
+  margin: 20px auto;
   display: flex;
   align-items: center;
 }

@@ -15,12 +15,14 @@ body{
   width: 100%;
   margin: 0;
   padding: 0;
-  min-width: $max-width;
-  max-width: $max-width;
 }
 
 ul {
 margin: 0;
 padding: 0;
 list-style: none;
+}
+
+html {
+  scroll-behavior: smooth
 }

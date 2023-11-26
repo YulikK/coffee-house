@@ -1,5 +1,7 @@
 .page-menu {
-  margin: 0 40px;
+  width: $max-width;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .page-menu__head {
