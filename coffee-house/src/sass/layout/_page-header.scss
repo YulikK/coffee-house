@@ -1,11 +1,49 @@
 .page-header {
-  width: $max-width;
-  // margin: 20px 40px;
+  width: 100%;
+  max-width: $max-width;
   margin: 20px auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    max-width: $max-tablet-width;
+    flex-direction: column;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: $max-mobile-width;
+  }
+}
+
+.page-header__navigation {
+  flex-grow: 1;
+}
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .page-header__logo {
   line-height: 0px;
+}
+
+.page-header__open-menu {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    position: relative;
+    display: block;
+    width: 44px;
+    height: 44px;
+    top: 8px;
+    right: 0;
+    padding: 0; 
+  }
 }
