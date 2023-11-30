@@ -86,12 +86,13 @@
     width: 24px;
     height: 24px;
   }
-
-  &:hover {
-    background-color: $color-bg-container;
-    path{
-      fill:$color-text-light;
-      stroke: $color-text-light;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $color-bg-container;
+      path{
+        fill:$color-text-light;
+        stroke: $color-text-light;
+      }
     }
   }
 
@@ -111,21 +112,24 @@ input:checked + .button--control-items{
 
 .button--app {
   width: 200px;
+  min-width: 200px;
   border: 1px solid $color-border-dark;
   transition: all .5s ease;
   padding: 12px 20px;
-
+  
   svg path{
     fill: $color-text-dark;
   }
 
-  &:hover {
-    background-color: $color-bg-container;
-    color: $color-text-light;
-    transition: all .5s ease;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $color-bg-container;
+      color: $color-text-light;
+      transition: all .5s ease;
 
-    svg path{
-      fill: $color-text-light;
+      svg path{
+        fill: $color-text-light;
+      }
     }
   }
 }
@@ -143,11 +147,13 @@ input:checked + .button--control-items{
     stroke: $color-text-light;
   }
 
-  &:hover{
-    background: $color-bg-body;
+  @media (any-hover: hover) {
+    &:hover{
+      background: $color-bg-body;
 
-    path{
-      stroke: $color-text-dark;
+      path{
+        stroke: $color-text-dark;
+      }
     }
   }
 }
@@ -171,12 +177,14 @@ input:checked + .button--control-items{
     transition: all 0.5s;
   }
 
-  &:hover:not(.button--filter-active) {
-    background: $color-bg-container;
-    color: $color-text-light;
+  @media (any-hover: hover) {
+    &:hover:not(.button--filter-active) {
+      background: $color-bg-container;
+      color: $color-text-light;
 
-    .filter__icon {
-      background: $color-bg-body;
+      .filter__icon {
+        background: $color-bg-body;
+      }
     }
   }
 }

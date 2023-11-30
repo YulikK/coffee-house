@@ -2,23 +2,68 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 100px 0;
+  margin: 103px 0;
+  width: 100%;
+  flex-wrap: wrap;
+
+  @media (max-width: $app-max-width) {
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+  @media (max-width: $mobile-width) {
+    gap: 40px;
+  }
+
 }
 
 .mobile-app__wrapper {
-  width: 630px;
+  width: calc(50% - 40px);
+  min-width: 400px;
+  max-width: 630px;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  @media (max-width: $app-max-width) {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
 }
 
 .mobile-app__header {
   @include font-head2();
   margin: 0;
+  @media (max-width: $tablet-width) {
+    @include adaptive-font-head2();
+  }
+  @media (max-width: $mobile-width) {
+    @include font-head2-mobile();
+  }
 }
 
 .mobile-app__description {
   @include font-body-medium();
   margin: 40px 0;
+  @media (max-width: $app-max-width) {
+    margin: 39px 0;
+  }
+}
+
+.mobile-app__image {
+  width: calc(50% - 40px);
+  max-width: 630px;
+  min-width: 348px;
+  height: auto;
+  flex-grow: 1;
+  @media (max-width: $app-max-width) {
+    width: 100%;
+  }
+  @media (max-width: $mobile-width) {
+    min-width: 348px;
+    max-width: 348px;
+  }
 }
 
 .mobile-app__button-wrapper {
@@ -26,6 +71,12 @@
   align-items: center;
   flex-direction: row;
   gap: 20px;
+  flex-wrap: wrap;
+  
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .mobile-app__download {
