@@ -1,6 +1,7 @@
 @import "normalize/_normalize";
 @import "abstracts/variables";
-@import "abstracts/fonts";
+@import "abstracts/_adaptive-size";
+@import "abstracts/_fonts";
 @import "layout/_body";
 @import "layout/_page-header";
 @import "layout/_navigation";

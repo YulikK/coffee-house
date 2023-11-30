@@ -1,0 +1,8 @@
+@import "../abstracts/variables";
+
+@function adaptive-from-tablet-to-mobile($tablet-size, $mobile-size) {
+  $add-size: $tablet-size - $mobile-size;
+  $max-free-width: $tablet-width-count - $mobile-width-count;
+  $coefficient: calc((100vw - 380px) / #{$max-free-width});
+  @return calc(#{$mobile-size + px} + #{$add-size} * #{$coefficient});
+}

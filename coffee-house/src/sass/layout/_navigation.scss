@@ -64,10 +64,12 @@
     transition: all 0.5s;
   }
 
-  &:hover {
-    &::after {
-      width: 100%;
-      left: 0;
+  @media (any-hover: hover) {
+    &:hover {
+      &::after {
+        width: 100%;
+        left: 0;
+      }
     }
   }
 }
@@ -90,6 +92,7 @@
 }
 
 .navigation__menu {
+  @include font-caption();
   width: 72px;
   display: flex;
   justify-content: space-between;
