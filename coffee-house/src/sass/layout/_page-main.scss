@@ -52,7 +52,7 @@
   }
   @media (max-width: $mobile-width) {
     @include font-head1-mobile();
-    width: 100%;
+    // width: 100%;
   }
 }
 

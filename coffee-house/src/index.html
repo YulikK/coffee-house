@@ -58,6 +58,41 @@
         </a>
       </div>
     </div>
+    <section id="favorite" class="favorite">
+      <h2 class="favorite__head">Choose your <span class="head__text-accent">favorite</span> coffee</h2>
+      <div class="favorite__slider">
+        <a class="favorite__before button button--arrow" href="#">
+          <svg class="button--arrow-left" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path id="arrow-left" d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <div class="favorite__card-wrapper">
+          <a class="favorite__card" href="">
+            <img class="favorite__image" src="img/png/coffee-slider-1.png" width="480" height="480" alt="S’mores Frappuccino">
+            <h3 class="favorite__name">S’mores Frappuccino</h3>
+            <p class="favorite__description">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+            <p class="favorite__price">$5.50</p>
+          </a>
+        </div>
+        <a class="favorite__after button button--arrow" href="">
+          <svg class="button--arrow-right" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <g id="arrow-right"><path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/></g>
+          </svg>
+        </a>
+      </div>
+      <div class="favorite__controls">
+            
+        <input id="card-item-1" type="radio" name="controls" checked>
+        <label for="card-item-1" class="favorite__control-items button button--control-items"></label>
+      
+        <input id="card-item-2" type="radio" name="controls">
+        <label for="card-item-2" class="favorite__control-items button button--control-items"></label>
+      
+        <input id="card-item-3" type="radio" name="controls">
+        <label for="card-item-3" class="favorite__control-items button button--control-items"></label>
+      
+    </div>
+    </section>
   </main>
 </body>
 </html>
