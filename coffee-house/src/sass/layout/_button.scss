@@ -158,7 +158,7 @@ input:checked + .button--control-items{
   }
 }
 
-.button--filter {
+.button__filter {
   border: 1px solid $color-border-light;
   display: flex;
   justify-content: center;
@@ -177,6 +177,28 @@ input:checked + .button--control-items{
     transition: all 0.5s;
   }
 
+  &--active {
+    background: $color-bg-container;
+    color: $color-text-light;
+    cursor: default;
+  
+    .filter__icon {
+      background: $color-bg-body;
+    }
+  }
+
+  &--coffee {
+    width: 115px;
+  }
+  &--tea {
+    width: 90px;
+  }
+  &--desert {
+    width: 124px;
+  }
+
+  
+
   @media (any-hover: hover) {
     &:hover:not(.button--filter-active) {
       background: $color-bg-container;
@@ -186,16 +208,6 @@ input:checked + .button--control-items{
         background: $color-bg-body;
       }
     }
-  }
-}
-
-.button--filter-active {
-  background: $color-bg-container;
-  color: $color-text-light;
-  cursor: default;
-
-  .filter__icon {
-    background: $color-bg-body;
   }
 }
 
@@ -241,7 +253,6 @@ input[id="hamburger-menu"] {
     transform: translate(-50%, -50%);
     padding: 13px;
     box-sizing: border-box;
-    // width: 50px;
   }
 
   .button__line-1,
@@ -292,3 +303,22 @@ input[id="hamburger-menu"] {
   
 }
 
+.button__refresh {
+  border: 1px solid $color-bg-container;
+  background-color: $color-bg-body;
+  box-sizing: border-box;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $color-bg-container;
+      path{
+        stroke: $color-text-light;
+      }
+    }
+  }
+}
