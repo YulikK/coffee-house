@@ -1,7 +1,19 @@
 .page-menu {
-  width: $max-width;
+  width: 94.4%;
+  max-width: $max-width;
   margin: 0 auto;
   box-sizing: border-box;
+
+  @media (max-width: $tablet-width) {
+    max-width: $max-tablet-width;
+    width: 89.6%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 94.4%;
+    max-width: $max-mobile-width;
+    min-width: $max-mobile-width;
+  }
 }
 
 .page-menu__head {
@@ -10,6 +22,12 @@
   margin: 0px;
   color: $color-text-dark;
   max-width: 800px;
+  @media (max-width: $tablet-width) {
+    @include adaptive-font-head2();
+  }
+  @media (max-width: $mobile-width) {
+    @include font-head2-mobile();
+  }
 }
 
 .page-menu__wrapper {

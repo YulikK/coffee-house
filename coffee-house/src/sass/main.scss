@@ -1,9 +1,10 @@
 @import "normalize/_normalize";
 @import "abstracts/variables";
-@import "abstracts/fonts";
+@import "abstracts/_adaptive-size";
+@import "abstracts/_fonts";
 @import "layout/_body";
 @import "layout/_page-header";
-@import "layout/_main-nav";
+@import "layout/_navigation";
 @import "layout/_page-main";
 @import "layout/_button";
 @import "layout/_favorite";
