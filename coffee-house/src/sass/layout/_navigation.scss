@@ -93,7 +93,8 @@
 
 .navigation__menu {
   @include font-caption();
-  width: 72px;
+  width: auto;
+  min-width: 72px;
   display: flex;
   justify-content: space-between;
 
