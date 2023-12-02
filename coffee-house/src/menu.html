@@ -51,27 +51,30 @@
       <h1 class="page-menu__head menu-head">Behind each of our cups hides an <span class="head__text-accent">amazing surprise</span></h1>
       <ul class="page-menu__filtet filter">
         <li class="filter__item">
-          <a class="filter__button button button__filter button__filter--coffee button__filter--active">
+          <input id="filter-coffee" type="radio" name="filter-menu" checked>
+          <label for="filter-coffee" class="filter__button button button__filter button__filter--coffee button__filter--active">
             <img class="filter__icon" src="img/svg/coffee.svg" width="16" height="24" alt="filter: coffee">
             <p class="filter__title">Coffee</p>
-          </a>
+          </label>
         </li>
         <li class="filter__item">
-          <a class="filter__button button button__filter button__filter--tea">
+          <input id="filter-tea" type="radio" name="filter-menu">
+          <label for="filter-tea" class="filter__button button button__filter button__filter--tea">
             <img class="filter__icon" src="img/svg/tea.svg" width="16" height="24" alt="filter: tea">
             <p class="filter__title">Tea</p>
-          </a>
+          </label>
         </li>
         <li class="filter__item">
-          <a class="filter__button button button__filter button__filter--desert">
+          <input id="filter-dessert" type="radio" name="filter-menu">
+          <label for="filter-dessert" class="filter__button button button__filter button__filter--dessert">
             <img class="filter__icon" src="img/svg/desert.svg" width="16" height="24" alt="filter: desert">
             <p class="filter__title">Dessert</p>
-          </a>
+          </label>
         </li>
       </ul>
     </div>
     <section class="menu">
-      <ul class="menu__list">
+      <ul class="menu__list menu__list--coffee menu__list--active">
         <li class="menu__item card">
           <div class="card__image-wrapper">
             <img class="card__image" src="img/png/coffee-1.png" width="340" height="340" alt="coffee cup">
@@ -149,6 +152,130 @@
           <div class="card__information-wrapper">
             <h3 class="card__name">Coffee with cognac</h3>
             <p class="card__description">Fragrant black coffee with cognac and whipped cream</p>
+            <p class="card__price">$6.50</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="menu__list menu__list--tea">
+        <li class="menu__item card">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/png/tea-1.png" width="340" height="340" alt="Moroccan">
+          </div>
+          <div class="card__information-wrapper">
+            <h3 class="card__name">Moroccan</h3>
+            <p class="card__description">Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
+            <p class="card__price">$4.50</p>
+          </div>
+        </li>
+        <li class="menu__item card">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/png/tea-2.png" width="340" height="340" alt="Ginger">
+          </div>
+          <div class="card__information-wrapper">
+            <h3 class="card__name">Ginger</h3>
+            <p class="card__description">Original black tea with fresh ginger, lemon and honey</p>
+            <p class="card__price">$5.00</p>
+          </div>
+        </li>
+        <li class="menu__item card">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/png/tea-3.png" width="340" height="340" alt="Cranberry">
+          </div>
+          <div class="card__information-wrapper">
+            <h3 class="card__name">Cranberry</h3>
+            <p class="card__description">Invigorating black tea with cranberry and honey</p>
+            <p class="card__price">$5.00</p>
+          </div>
+        </li>
+        <li class="menu__item card">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/png/tea-4.png" width="340" height="340" alt="Sea buckthorn">
+          </div>
+          <div class="card__information-wrapper">
+            <h3 class="card__name">Sea buckthorn</h3>
+            <p class="card__description">Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon</p>
+            <p class="card__price">$5.00</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="menu__list menu__list--dessert">
+        <li class="menu__item card">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/png/dessert-1.png" width="340" height="340" alt="Marble cheesecake">
+          </div>
+          <div class="card__information-wrapper">
+            <h3 class="card__name">Marble cheesecake</h3>
+            <p class="card__description">Philadelphia cheese with lemon zest on a light sponge cake and red currant jam</p>
+            <p class="card__price">$3.50</p>
+          </div>
+        </li>
+        <li class="menu__item card">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/png/dessert-2.png" width="340" height="340" alt="Red velvet">
+          </div>
+          <div class="card__information-wrapper">
+            <h3 class="card__name">Red velvet</h3>
+            <p class="card__description">Layer cake with cream cheese frosting</p>
+            <p class="card__price">$4.00</p>
+          </div>
+        </li>
+        <li class="menu__item card">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/png/dessert-3.png" width="340" height="340" alt="Cheesecakes">
+          </div>
+          <div class="card__information-wrapper">
+            <h3 class="card__name">Cheesecakes</h3>
+            <p class="card__description">Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar</p>
+            <p class="card__price">$4.50</p>
+          </div>
+        </li>
+        <li class="menu__item card">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/png/dessert-4.png" width="340" height="340" alt="Creme brulee">
+          </div>
+          <div class="card__information-wrapper">
+            <h3 class="card__name">Creme brulee</h3>
+            <p class="card__description">Delicate creamy dessert in a caramel basket with wild berries</p>
+            <p class="card__price">$4.00</p>
+          </div>
+        </li>
+        <li class="menu__item card">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/png/dessert-5.png" width="340" height="340" alt="Pancakes">
+          </div>
+          <div class="card__information-wrapper">
+            <h3 class="card__name">Pancakes</h3>
+            <p class="card__description">Tender pancakes with strawberry jam and fresh strawberries</p>
+            <p class="card__price">$4.50</p>
+          </div>
+        </li>
+        <li class="menu__item card">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/png/dessert-6.png" width="340" height="340" alt="Honey cake">
+          </div>
+          <div class="card__information-wrapper">
+            <h3 class="card__name">Honey cake</h3>
+            <p class="card__description">Classic honey cake with delicate custard</p>
+            <p class="card__price">$4.50</p>
+          </div>
+        </li>
+        <li class="menu__item card">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/png/dessert-7.png" width="340" height="340" alt="Chocolate cake">
+          </div>
+          <div class="card__information-wrapper">
+            <h3 class="card__name">Chocolate cake</h3>
+            <p class="card__description">Cake with hot chocolate filling and nuts with dried apricots</p>
+            <p class="card__price">$5.50</p>
+          </div>
+        </li>
+        <li class="menu__item card">
+          <div class="card__image-wrapper">
+            <img class="card__image" src="img/png/dessert-8.png" width="340" height="340" alt="Black forest">
+          </div>
+          <div class="card__information-wrapper">
+            <h3 class="card__name">Black forest</h3>
+            <p class="card__description">A combination of thin sponge cake with cherry jam and light chocolate mousse</p>
             <p class="card__price">$6.50</p>
           </div>
         </li>

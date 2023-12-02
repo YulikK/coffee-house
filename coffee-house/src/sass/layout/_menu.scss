@@ -5,12 +5,16 @@
   gap: 35px;
 }
 .menu__list {
-  display: flex;
+  display: none;
   align-items: stretch;
   justify-content: space-evenly;
   gap: 35px;
   flex-wrap: wrap;
   margin-top: 40px;
+
+  &--active{
+    display: flex;
+  }
 }
 
 .menu__item:nth-child(n+5){

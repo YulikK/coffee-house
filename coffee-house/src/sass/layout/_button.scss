@@ -177,15 +177,15 @@ input:checked + .button--control-items{
     transition: all 0.5s;
   }
 
-  &--active {
-    background: $color-bg-container;
-    color: $color-text-light;
-    cursor: default;
+  // &--active {
+  //   background: $color-bg-container;
+  //   color: $color-text-light;
+  //   cursor: default;
   
-    .filter__icon {
-      background: $color-bg-body;
-    }
-  }
+  //   .filter__icon {
+  //     background: $color-bg-body;
+  //   }
+  // }
 
   &--coffee {
     width: 115px;
@@ -193,7 +193,7 @@ input:checked + .button--control-items{
   &--tea {
     width: 90px;
   }
-  &--desert {
+  &--dessert {
     width: 124px;
   }
 
