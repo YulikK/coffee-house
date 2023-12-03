@@ -8,10 +8,10 @@
   max-width: $max-width;
   min-width: $max-mobile-width;
   box-sizing: border-box;
-  margin: 99px auto 40px auto;
+  margin: 100px auto 40px auto;
   gap: 40px;
   flex-wrap: wrap;
-  padding: 100px;
+  padding: 99px;
   @media (max-width: ($desktop-width - 1)) {
     padding-left: adaptive-from-desktop-to-tablet(100, 60);
     padding-right: adaptive-from-desktop-to-tablet(100, 60);
