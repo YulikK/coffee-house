@@ -47,6 +47,168 @@
     </div>
   </header>
   <main class="page-menu">
+    <section class="card-modal">
+      <div class="card-modal__wrapper">
+        <div class="card-modal__image-wrapper">
+          <img class="card-modal__image" src="img/png/coffee-1.png" width="340" height="340" alt="coffee cup">
+        </div>
+        <div class="card-modal__information-wrapper">
+          <div class="card-modal__caption-wrapper">
+            <h3 class="card-modal__name">Irish coffee</h3>
+            <p class="card-modal__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+          </div>
+          <div class="card-modal__controler-wrapper control control--size-ml control--active">
+            <p class="control__caption">Size</p>
+            <div class="control__wrapper">
+              <ul class="control__list">
+                <li class="control__item">
+                  <input id="size-200-ml" type="radio" name="size-ml" class="control__input" checked>
+                  <label for="size-200-ml" class="control__button button button__control button__control--active">
+                    <p class="control__mark">S</p>
+                    <p class="control__title">200 ml</p>
+                  </label>
+                </li>
+                <li class="control__item">
+                  <input id="size-300-ml" type="radio" name="size-ml" class="control__input">
+                  <label for="size-300-ml" class="control__button button button__control">
+                    <p class="control__mark">M</p>
+                    <p class="control__title">300 ml</p>
+                  </label>
+                </li>
+                <li class="control__item">
+                  <input id="size-400-ml" type="radio" name="size-ml" class="control__input">
+                  <label for="size-400-ml" class="control__button button button__control">
+                    <p class="control__mark">L</p>
+                    <p class="control__title">400 ml</p>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-modal__controler-wrapper control control--size-g">
+            <p class="control__caption">Size</p>
+            <div class="control__wrapper">
+              <ul class="control__list">
+                <li class="control__item">
+                  <input id="size-50-g" type="radio" name="size-g" class="control__input" checked>
+                  <label for="size-50-g" class="control__button button button__control button__control--active">
+                    <p class="control__mark">S</p>
+                    <p class="control__title">50 g</p>
+                  </label>
+                </li>
+                <li class="control__item">
+                  <input id="size-100-g" type="radio" name="size-g" class="control__input">
+                  <label for="size-100-g" class="control__button button button__control">
+                    <p class="control__mark">M</p>
+                    <p class="control__title">100 g</p>
+                  </label>
+                </li>
+                <li class="control__item">
+                  <input id="size-200-g" type="radio" name="size-g" class="control__input">
+                  <label for="size-200-g" class="control__button button button__control">
+                    <p class="control__mark">L</p>
+                    <p class="control__title">200 g</p>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-modal__controler-wrapper control control--additives-coffee control--active">
+            <p class="control__caption">Additives</p>
+            <div class="control__wrapper">
+              <ul class="control__list">
+                <li class="control__item">
+                  <input id="additives-sugar-coffee" type="checkbox" name="additives-coffee" class="control__input">
+                  <label for="additives-sugar-coffee" class="control__button button button__control button__control--active">
+                    <p class="control__mark">1</p>
+                    <p class="control__title">Sugar</p>
+                  </label>
+                </li>
+                <li class="control__item">
+                  <input id="additives-cinnamon" type="checkbox" name="additives-coffee" class="control__input">
+                  <label for="additives-cinnamon" class="control__button button button__control">
+                    <p class="control__mark">2</p>
+                    <p class="control__title">Cinnamon</p>
+                  </label>
+                </li>
+                <li class="control__item">
+                  <input id="additives-syrup-coffee" type="checkbox" name="additives-coffee" class="control__input">
+                  <label for="additives-syrup-coffee" class="control__button button button__control">
+                    <p class="control__mark">3</p>
+                    <p class="control__title">Syrup</p>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-modal__controler-wrapper control control--additives-tea">
+            <p class="control__caption">Additives</p>
+            <div class="control__wrapper">
+              <ul class="control__list">
+                <li class="control__item">
+                  <input id="additives-sugar-tea" type="checkbox" name="additives-tea" class="control__input">
+                  <label for="additives-sugar-tea" class="control__button button button__control button__control--active">
+                    <p class="control__mark">1</p>
+                    <p class="control__title">Sugar</p>
+                  </label>
+                </li>
+                <li class="control__item">
+                  <input id="additives-lemon" type="checkbox" name="additives-tea" class="control__input">
+                  <label for="additives-lemon" class="control__button button button__control">
+                    <p class="control__mark">2</p>
+                    <p class="control__title">Lemon</p>
+                  </label>
+                </li>
+                <li class="control__item">
+                  <input id="additives-syrup-tea" type="checkbox" name="additives-tea" class="control__input">
+                  <label for="additives-syrup-tea" class="control__button button button__control">
+                    <p class="control__mark">3</p>
+                    <p class="control__title">Syrup</p>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-modal__controler-wrapper control control--additives-dessert">
+            <p class="control__caption">Additives</p>
+            <div class="control__wrapper">
+              <ul class="control__list">
+                <li class="control__item">
+                  <input id="additives-berries" type="checkbox" name="additives-dessert" class="control__input">
+                  <label for="additives-berries" class="control__button button button__control button__control--active">
+                    <p class="control__mark">1</p>
+                    <p class="control__title">Berries</p>
+                  </label>
+                </li>
+                <li class="control__item">
+                  <input id="additives-nuts" type="checkbox" name="additives-dessert" class="control__input">
+                  <label for="additives-nuts" class="control__button button button__control">
+                    <p class="control__mark">2</p>
+                    <p class="control__title">Nuts</p>
+                  </label>
+                </li>
+                <li class="control__item">
+                  <input id="additives-jam" type="checkbox" name="additives-dessert" class="control__input">
+                  <label for="additives-jam" class="control__button button button__control">
+                    <p class="control__mark">3</p>
+                    <p class="control__title">Jam</p>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-modal__price-wrapper">
+            <p class="card-modal__price">Total:</p>
+            <p class="card-modal__price">$7.00</p>
+          </div>
+          <div class="card-modal__alert">
+            <img class="card-modal__alert-icon" src="img/svg/info-empty.svg" width="16" height="16" alt="alert information">
+            <p class="card-modal__alert-information">The cost is not final. Download our mobile app to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
+          </div>
+          <a class="card-modal__button button button__close-modal">Close</a>
+        </div>
+      </div>
+    </section>
     <div class="page-menu__wrapper">
       <h1 class="page-menu__head menu-head">Behind each of our cups hides an <span class="head__text-accent">amazing surprise</span></h1>
       <ul class="page-menu__filtet filter">

@@ -1,0 +1,68 @@
+.control {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+
+  &--active {
+    display: flex;
+  }
+}
+
+.control__caption {
+  @include font-body-medium();
+  margin: 0;
+}
+
+
+.control__list {
+  display: flex;
+}
+
+.control__mark, 
+.control__title{
+  margin: 0;
+  @include font-caption();
+}
+
+input[class="control__input"] {
+  display: none;
+
+  &:checked ~ label{
+    background: $color-bg-container;
+    color: $color-text-light;
+    cursor: default;
+  
+    .control__mark {
+      background: $color-bg-body;
+      color: $color-text-dark;
+    }
+  }
+}
+
+.card-modal__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.card-modal__price {
+  @include font-head3();
+  margin: 0;
+}
+
+.card-modal__alert {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  padding: 12px 0;
+  border-top: 1px solid $color-border-light;
+
+}
+
+.card-modal__alert-icon {
+  width: 16px;
+  height: 16px;
+}
+.card-modal__alert-information {
+  @include font-body-caption();
+  margin: 0;
+}

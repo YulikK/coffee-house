@@ -177,16 +177,6 @@ input:checked + .button--control-items{
     transition: all 0.5s;
   }
 
-  // &--active {
-  //   background: $color-bg-container;
-  //   color: $color-text-light;
-  //   cursor: default;
-  
-  //   .filter__icon {
-  //     background: $color-bg-body;
-  //   }
-  // }
-
   &--coffee {
     width: 115px;
   }
@@ -319,6 +309,53 @@ input[id="hamburger-menu"] {
       path{
         stroke: $color-text-light;
       }
+    }
+  }
+}
+
+.button__control {
+  border: 1px solid $color-border-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px 6px 6px;
+  transition: all 0.5s;
+  color: $color-text-dark;
+
+  .control__mark {
+    padding: 3px 7px;
+    border-radius: 100px;
+    background: $color-border-light;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    transition: all 0.5s;
+  }
+
+  @media (any-hover: hover) {
+    &:hover:not(.button--filter-active) {
+      background: $color-bg-container;
+      color: $color-text-light;
+
+      .control__mark {
+        background: $color-bg-body;
+      }
+    }
+  }
+}
+
+.button__close-modal {
+  border: 1px solid $color-border-light;
+  padding: 10px 78px;
+  transition: all 0.5s;
+  color: $color-text-dark;
+  text-align: center;
+  
+  @media (any-hover: hover) {
+    &:hover:not(.button--filter-active) {
+      background: $color-bg-container;
+      color: $color-text-light;
     }
   }
 }

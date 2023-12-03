@@ -26,4 +26,15 @@ if (pageMenu !== null) {
     menuTea.classList.remove('menu__list--active');
     menuCoffee.classList.remove('menu__list--active');
   });
+
+  const cardModal = document.querySelector('.card-modal');
+  const card = document.querySelector('.card');
+  const closeButton = document.querySelector('.card-modal__button');
+
+  card.addEventListener('click', function() {
+    cardModal.classList.add('card-modal--active');
+  });
+  closeButton.addEventListener('click', function() {
+    cardModal.classList.remove('card-modal--active');
+  });
 };
