@@ -59,5 +59,10 @@ module.exports = {
         { from: "./src/img", to: "img" }
       ],
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "./src/mock", to: "mock" }
+      ],
+    }),
   ]
 }

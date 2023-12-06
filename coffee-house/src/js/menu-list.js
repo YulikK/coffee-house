@@ -1,4 +1,4 @@
-import mockFile from '../../mock/products.json';
+import mockFile from '../mock/products.json';
 import MenuModel from "./model/menu.js";
 import MenuListPresenter from "./presenter/menu-list.js";
 
