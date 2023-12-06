@@ -109,8 +109,8 @@ export default class MenuList {
     };
 
     menuCardComponent.setMenuCardClickHandler(onMenuCardClick);
-
     menuCardDetailsComponent.setCloseClickHandler(onCloseButtonClick);
+    menuCardDetailsComponent.setControllerClickHandler(onCloseButtonClick);
     render(this._menuListComponent, menuCardComponent);
   }
 
