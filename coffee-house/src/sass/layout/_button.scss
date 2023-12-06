@@ -187,6 +187,16 @@ input:checked + .button--control-items{
     width: 124px;
   }
 
+  &--active {
+    background: $color-bg-container;
+    color: $color-text-light;
+    cursor: default;
+  
+    .filter__icon {
+      background: $color-bg-body;
+    }
+  }
+
   
 
   @media (any-hover: hover) {

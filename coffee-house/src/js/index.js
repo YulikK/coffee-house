@@ -1,3 +1,4 @@
 import('../sass/main.scss');
 import('./filter.js');
-import('./menu.js');
+import('./navigation.js');
+import('./menu-list.js');

@@ -10,23 +10,23 @@
 
 .filter__title {
   @include font-caption();
-  color: $color-text-dark;
+  color: inherit;
   margin: 0;
 }
 
-input[name="filter-menu"] {
-  display: none;
+// input[name="filter-menu"] {
+//   display: none;
 
-  &:checked ~ label{
-    background: $color-bg-container;
-    color: $color-text-light;
-    cursor: default;
+//   &:checked ~ label{
+//     background: $color-bg-container;
+//     color: $color-text-light;
+//     cursor: default;
   
-    .filter__icon {
-      background: $color-bg-body;
-    }
-  }
-}
+//     .filter__icon {
+//       background: $color-bg-body;
+//     }
+//   }
+// }
 
 // input[id="filter-coffee"]:checked {
 //   ~ .menu__list--coffee {

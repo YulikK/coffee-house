@@ -1,16 +1,18 @@
 .page-main {
-  width: 94.4%;
+  width: 100%;
+  padding: 0px 40px;
   max-width: $max-width;
   margin: 0 auto;
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
     max-width: $max-tablet-width;
-    width: 89.6%;
+    padding-left: adaptive-from-tablet-to-mobile(40, 16);
+    padding-right: adaptive-from-tablet-to-mobile(40, 16);
   }
 
   @media (max-width: $mobile-width) {
-    width: 94.4%;
+    padding: 0px 16px;
     max-width: $max-mobile-width;
     min-width: $max-mobile-width;
   }

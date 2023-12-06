@@ -1,11 +1,11 @@
 .control {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 8px;
 
-  &--active {
-    display: flex;
-  }
+  // &--active {
+  //   display: flex;
+  // }
 }
 
 .control__caption {

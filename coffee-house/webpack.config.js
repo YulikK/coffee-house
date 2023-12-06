@@ -37,6 +37,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
       watch: true,
+      
     },
     compress: true,
     open: true,
