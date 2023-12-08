@@ -2,13 +2,11 @@ import {CARD_COUNT_PER_STEP_DESKTOP, CARD_COUNT_PER_STEP_TABLET, tabletWidth} fr
 import FilterView from "../view/filter.js";
 import MenuCardView from "../view/card.js";
 import MenuListView from "../view/menu-list.js";
-// import NoFilmView from "../view/no-film.js";
 import MenuSectionView from "../view/menu-section.js";
 import ShowMoreButtonView from "../view/show-more-button.js";
 import MenuCardDetailsView from "../view/card-details.js";
 import {render, hideDetails, showDetails, remove} from "../utils/render.js";
 import {FilterType} from "../const.js";
-// import {sortByDate, sortByRating} from "../utils/film-card.js";
 
 export default class MenuList {
   constructor(menuContainer, filterContainer, menuDetailsContainer) {
@@ -18,14 +16,12 @@ export default class MenuList {
     this._menuListComponent = new MenuListView();
     this._menuContainerComponent = new MenuSectionView();
     this._showMoreButtonComponent = new ShowMoreButtonView();
-    // this._noFilmComponent = new NoFilmView();
     this._filterComponent = new FilterView();
     if(window.matchMedia(`(max-width: 768px`).matches) {
       this._cardStep = CARD_COUNT_PER_STEP_TABLET;
     } else {
       this._cardStep = CARD_COUNT_PER_STEP_DESKTOP;
     }
-    this._cardStep = CARD_COUNT_PER_STEP_DESKTOP;
     this._renderedMenuCount = this._cardStep;
     this._currentFilterType = FilterType.COFFEE;
 
@@ -120,10 +116,6 @@ export default class MenuList {
       .forEach((boardMenu) => this._renderMenuCard(boardMenu));
   }
 
-  // _renderNoFilm() {
-  //   render(this._filmsListContainerComponent, this._noFilmComponent);
-  // }
-
   _handleShowMoreButtonClick() {
     this._renderMenuCards(this._renderedMenuCount, this._renderedMenuCount + this._cardStep);
     this._renderedMenuCount += this._cardStep;
@@ -145,18 +137,8 @@ export default class MenuList {
 
   _renderMenuList() {
     this._renderMenuCards(0, Math.min(this._boardMenu.length, this._cardStep));
-    //!! if (this._boardMenu.length > this._cardStep) {
+    if (this._boardMenu.length > this._cardStep) {
       this._renderShowMoreButton();
-    // }
+    }
   }
-
-  // _renderBoard() {
-
-  //   if (this._boardFilms.length === 0) {
-  //     this._renderNoFilm();
-  //     return;
-  //   }
-
-  //   this._renderFilmList();
-  // }
 }

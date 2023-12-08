@@ -1,5 +1,3 @@
-// import {humanizeFilmDuration, humanizeFilmDate} from "../utils/film-card.js";
-// import {EMOTIONS} from "../const.js";
 import AbstractView from "./abstract.js";
 
 const createSizeTemplate = (sizeName, sizeProp, checked) => {

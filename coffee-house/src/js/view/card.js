@@ -1,4 +1,3 @@
-// import {humanizeFilmDuration, humanizeFilmShortDate} from "../utils.js";
 import AbstractView from "./abstract.js";
 
 export const createCardMenuTemplate = (menuCard) => {
@@ -31,7 +30,6 @@ export default class CardMenu extends AbstractView {
 
   setMenuCardClickHandler(callback) {
     this._callback.cardMenuClick = callback;
-    // this.getElement().querySelector(`.card`).addEventListener(`click`, this._cardMenuClickHandler);
     this.getElement().addEventListener(`click`, this._cardMenuClickHandler);
   }
 

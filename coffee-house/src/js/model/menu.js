@@ -1,12 +1,10 @@
 export default class Menu{
   constructor() {
-   // super();
     this._cards = [];
   }
 
   setMenu(cards) {
     this._cards = cards.slice();
-    // this._notify(updateTypeCard, updateTypeDetails);
   }
 
   getMenu() {

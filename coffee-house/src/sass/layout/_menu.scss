@@ -21,16 +21,16 @@
   
 }
 
-.menu__item:nth-child(n+5){
-  @media (max-width: $tablet-width) {
-    display: none;
-  }
-}
+// .menu__item:nth-child(n+5){
+//   @media (max-width: $tablet-width) {
+//     display: none;
+//   }
+// }
 
 .menu__refresh {
-  display: none;
-  @media (max-width: $tablet-width) {
-    display: flex;
-  }
+  display: flex;
+  // @media (max-width: $tablet-width) {
+  //   display: flex;
+  // }
 }
 
