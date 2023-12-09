@@ -187,6 +187,16 @@ input:checked + .button--control-items{
     width: 124px;
   }
 
+  &--active {
+    background: $color-bg-container;
+    color: $color-text-light;
+    cursor: default;
+  
+    .filter__icon {
+      background: $color-bg-body;
+    }
+  }
+
   
 
   @media (any-hover: hover) {
@@ -331,6 +341,7 @@ input[id="hamburger-menu"] {
     height: 30px;
     box-sizing: border-box;
     transition: all 0.5s;
+    text-align: center;
   }
 
   @media (any-hover: hover) {

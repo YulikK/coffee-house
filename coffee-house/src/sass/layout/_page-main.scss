@@ -1,16 +1,18 @@
 .page-main {
-  width: 94.4%;
+  width: 100%;
+  padding: 0px 40px;
   max-width: $max-width;
   margin: 0 auto;
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
     max-width: $max-tablet-width;
-    width: 89.6%;
+    padding-left: adaptive-from-tablet-to-mobile(40, 16);
+    padding-right: adaptive-from-tablet-to-mobile(40, 16);
   }
 
   @media (max-width: $mobile-width) {
-    width: 94.4%;
+    padding: 0px 16px;
     max-width: $max-mobile-width;
     min-width: $max-mobile-width;
   }
@@ -20,6 +22,9 @@
   background: url("../img/png/img-hero.png") lightgray 50% / cover no-repeat;
   border-radius: 40px;
   padding: 100px;
+  overflow: hidden;
+  position: relative;
+  
   @media (max-width: $tablet-width) {
     padding-top: adaptive-from-tablet-to-mobile(102, 60);
     padding-bottom: adaptive-from-tablet-to-mobile(102, 60);
@@ -30,12 +35,25 @@
     padding: 60px 16px;
   }
 }
+.page-main__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  max-width: 1360px;
+  height: 100%;
+  object-fit: cover;
+
+}
 
 .page-main__wrapper {
   display: flex;
   flex-direction: column;
   gap: 40px;
   max-width: 530px;
+  z-index: 2;
+  position: relative;
 
   @media (max-width: $mobile-width) {
     width: 100%;

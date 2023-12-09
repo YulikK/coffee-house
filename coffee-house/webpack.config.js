@@ -37,6 +37,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
       watch: true,
+      
     },
     compress: true,
     open: true,
@@ -56,6 +57,11 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: "./src/img", to: "img" }
+      ],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "./src/mock", to: "mock" }
       ],
     }),
   ]
