@@ -6,9 +6,11 @@ if (favoriteSectionElement !== null) {
   const afterBtn = document.querySelector('.slider__after');
   const sliderTrack = document.querySelector('.slides');
   const slides = document.querySelectorAll('.slider__card');
+  const slideWrapper = document.querySelectorAll('.slide');
   const delay = 6000;
   const barDelay = 50;
   const barMaxWidth = 40;
+  let isMouseOver = false;
   let timerEndTime;
   let counter = 1;
   let timerStepId;
@@ -32,9 +34,10 @@ if (favoriteSectionElement !== null) {
     return counter
   };
 
-  function setSlide(nerCounter) {
+  function setSlide(newCounter) {
+    isMouseOver = false;
     resetTimerBar();
-    counter = setCounter(nerCounter);
+    counter = setCounter(newCounter);
     document.getElementById('radio' + counter).checked = true;
     clearTimer();
     setTimers();
@@ -44,6 +47,20 @@ if (favoriteSectionElement !== null) {
     evt.preventDefault();
   }
 
+  function onSlideMouseOver(evt){
+    if (!isMouseOver) {
+      isMouseOver = true;
+      setTimerPause();
+      evt.target.addEventListener('mouseleave', onSlideMouseOut);
+    }
+  }
+  function onSlideMouseOut(evt){
+    if(evt.currentTarget.classList.contains('slider__card')) {
+      isMouseOver = false;
+      stopTimerPause();
+    }
+    // console.log(evt.currentTarget);
+  }
   function onChangeSlide(evt){
     evt.preventDefault();
     setSlide(Number(evt.target.id.toString().slice(-1)));
@@ -92,6 +109,7 @@ if (favoriteSectionElement !== null) {
   }
 
   function setTimers(slideDelay = delay){
+    slideDelay = Math.min(Math.abs(slideDelay), delay);
     timerStepId = setInterval(setTimerSlide, slideDelay);
     timerBarId = setInterval(setTimerBar, barDelay);
     timerEndTime = Date.now() + slideDelay;
@@ -99,6 +117,7 @@ if (favoriteSectionElement !== null) {
 
   function swipeStart(evt) {
     const eventTouch = (evt.type.search('touch') !== -1) ? evt.touches[0] : evt;
+
     setTimerPause();
 
     currentXPosition = startXPosition = eventTouch.clientX;
@@ -147,6 +166,7 @@ if (favoriteSectionElement !== null) {
   const inputElements = favoriteSectionElement.querySelectorAll('input[name="radio-btn"]');
   inputElements.forEach((inputElement) => inputElement.addEventListener(`change`, onChangeSlide));
   slides.forEach((cardElement) => cardElement.addEventListener(`click`, onSlideClick));
+  slideWrapper.forEach((cardElement) => cardElement.addEventListener(`mouseover`, onSlideMouseOver));
   beforeBtn.addEventListener(`click`, onClickBeforeSlide);
   afterBtn.addEventListener(`click`, onClickAfterSlide);
   sliderTrack.addEventListener('touchstart', swipeStart);

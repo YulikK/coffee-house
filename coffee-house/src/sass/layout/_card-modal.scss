@@ -15,8 +15,10 @@
 
 .card-modal__wrapper {
   position: fixed;
-  top: calc(50% - 250px);
-  left: calc(50% - 400px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
   max-width: 800px;
   box-sizing: border-box;
   padding: 16px;
@@ -29,24 +31,40 @@
   border-radius: 40px;
   overflow: hidden;
   height: 310px;
+  width: 310px;
+  // width: 40%;
+  @media (max-width: $card-modal-mini){
+    display: none;
+  }
+  
 }
 .card-modal__image {
   border-radius: 40px;
   object-fit: cover;
   scale: 1.1;
   transition: 0.5s;
+  // width: 100%;
   width: 310px;
   height: 310px;
 }
 
 .card-modal__information-wrapper {
   max-width: 458px;
-  padding-left: 20px;
+  width: 60%;
+  padding-left: 22px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   gap: 20px;
+
+  @media (max-width: $tablet-width){
+    width: 53%;
+  }
+  @media (max-width: $card-modal-mini){
+    width: 100%;
+    padding-left: 0px;
+  }
 }
 
 .card-modal__name {

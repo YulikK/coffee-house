@@ -6,10 +6,10 @@ import MenuSectionView from "../view/menu-section.js";
 import ShowMoreButtonView from "../view/show-more-button.js";
 import MenuCardDetailsView from "../view/card-details.js";
 import {render, hideDetails, showDetails, remove} from "../utils/render.js";
-import {FilterType} from "../const.js";
+import {FilterType, MenuType} from "../const.js";
 
 export default class MenuList {
-  constructor(menuContainer, filterContainer, menuDetailsContainer) {
+  constructor(menuContainer, filterContainer, menuDetailsContainer, currentMenuType) {
     this._menuContainer = menuContainer;
     this._filterContainer = filterContainer;
     this._menuDetailsContainer = menuDetailsContainer;
@@ -17,7 +17,8 @@ export default class MenuList {
     this._menuContainerComponent = new MenuSectionView();
     this._showMoreButtonComponent = new ShowMoreButtonView();
     this._filterComponent = new FilterView();
-    if(window.matchMedia(`(max-width: 768px`).matches) {
+    this._currentMenuType = currentMenuType;
+    if(this._currentMenuType == MenuType.MOBILE) {
       this._cardStep = CARD_COUNT_PER_STEP_TABLET;
     } else {
       this._cardStep = CARD_COUNT_PER_STEP_DESKTOP;
@@ -38,6 +39,20 @@ export default class MenuList {
     render(this._menuContainer, this._menuContainerComponent);
     render(this._menuContainerComponent, this._menuListComponent);
 
+    this._renderMenuList();
+  }
+  setMenuType(type) {
+    this._currentMenuType = type;
+    if(this._currentMenuType == MenuType.MOBILE) {
+      this._cardStep = CARD_COUNT_PER_STEP_TABLET;
+    } else {
+      this._cardStep = CARD_COUNT_PER_STEP_DESKTOP;
+    }
+  }
+
+  update(){
+    this._clearMenuList();
+    remove(this._showMoreButtonComponent);
     this._renderMenuList();
   }
 

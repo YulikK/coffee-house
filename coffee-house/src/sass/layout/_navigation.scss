@@ -2,25 +2,37 @@
   display: flex;
   flex-grow: 1;
   align-items: center;
+  z-index: 100;
+  background: $color-bg-body;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
     width: 100%;
+    height: calc(100svh - 80px);
     margin: 80px auto;
     gap: 100px;
+    position: fixed;
+    overflow-y: auto;
+    right: -100%;
+    top: 0;
+    transition: all 0.5s;
+    padding-top: 80px;
   }
 
   &--opened {
       @media (max-width: $tablet-width){
+        // position: absolute;
         display: flex;
         flex-direction: column;
         align-items: center;
+        right: 0;
+        // padding-top: 80px;
       }
   }
     
   &--closed {
       @media (max-width: $tablet-width) {
-        display: none;
+        // position: fixed;
       }
   }
 }
@@ -39,7 +51,7 @@
     flex-direction: column;
     align-items: center;
     gap: 60px;
-    
+    flex-grow: 0;
   }
   
 }

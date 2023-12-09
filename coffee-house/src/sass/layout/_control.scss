@@ -2,20 +2,23 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-
-  // &--active {
-  //   display: flex;
-  // }
 }
 
 .control__caption {
   @include font-body-medium();
   margin: 0;
 }
-
+.control__wrapper{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .control__list {
   display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .control__mark, 

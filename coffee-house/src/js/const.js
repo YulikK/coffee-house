@@ -5,4 +5,9 @@ export const FilterType = {
   TEA: `tea`,
   DESSERT: `dessert`
 };
+export const MenuType = {
+  DESKTOP: `desktop`,
+  MOBILE: `mobile`
+};
 export const tabletWidth = '768px';
+export const tabletWidthCount = 768;

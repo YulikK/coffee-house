@@ -20,6 +20,16 @@ export const createElement = (template) => {
   return newElement.firstChild;
 };
 
+const onScrollBody = () =>{
+  const bodyElement = document.querySelector(`body`);
+  bodyElement.classList.remove(`body--no-scroll`);
+}
+
+const offScrollBody = () =>{
+  const bodyElement = document.querySelector(`body`);
+  bodyElement.classList.add(`body--no-scroll`);
+}
+
 export const showDetails = (container, detailsComponent) => {
   if (container instanceof Abstract) {
     container = container.getElement();
@@ -28,7 +38,8 @@ export const showDetails = (container, detailsComponent) => {
     detailsComponent = detailsComponent.getElement();
   }
   container.appendChild(detailsComponent);
-  container.classList.add(`hide-overflow`);
+  // container.classList.add(`hide-overflow`);
+  offScrollBody();
 };
 
 export const hideDetails = (container, detailsComponent) => {
@@ -39,7 +50,8 @@ export const hideDetails = (container, detailsComponent) => {
     detailsComponent = detailsComponent.getElement();
   }
   container.removeChild(detailsComponent);
-  container.classList.remove(`hide-overflow`);
+  onScrollBody();
+  // container.classList.remove(`hide-overflow`);
 };
 
 export const remove = (component) => {
