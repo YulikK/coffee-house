@@ -1,15 +1,12 @@
-
 const favoriteSectionElement = document.querySelector(`.favorite`);
 
 if (favoriteSectionElement !== null) {
   const beforeBtn = document.querySelector('.slider__before');
   const afterBtn = document.querySelector('.slider__after');
   const sliderTrack = document.querySelector('.slides');
-  const slides = document.querySelectorAll('.slider__card');
   const slideElement = document.querySelectorAll('.slide');
   const delay = 6000;
   const barDelay = 10;
-  const barMaxWidth = 40;
   let isMouseOver = false;
   let isSwipe = false;
   let timerEndTime;
@@ -55,6 +52,7 @@ if (favoriteSectionElement !== null) {
     if(evt.currentTarget.classList.contains('slide')) {
       isMouseOver = false;
       stopTimerPause();
+
     }
   }
   function onChangeSlide(evt){
@@ -82,7 +80,6 @@ if (favoriteSectionElement !== null) {
       clearTimer();
       timerEndTime = timerEndTime - Date.now();
       timerEndTime = Math.min(Math.abs(timerEndTime), delay);
-      // console.log('setTimerPause ' + timerEndTime);
     }
   }
   function stopTimerPause() {
@@ -92,7 +89,8 @@ if (favoriteSectionElement !== null) {
   function setTimerBar() {
     const barElement = document.querySelector('.manual-btn' + counter + ' span');
     const timeToEnd = timerEndTime - Date.now();
-    // barElement.value = delay - timeToEnd;
+    const timePass = delay - timeToEnd;
+    barElement.style.width = timePass * 100 / delay + '%';
   }
 
   function resetTimerBar() {
@@ -102,16 +100,16 @@ if (favoriteSectionElement !== null) {
 
   function clearTimer(){
     clearInterval(timerStepId);
-    timerStepId = null;
     clearInterval(timerBarId);
-    timerBarId = null;
   }
 
   function setTimers(slideDelay = delay){
-    slideDelay = Math.min(Math.abs(slideDelay), delay);
-    timerStepId = setInterval(setTimerSlide, slideDelay);
-    timerBarId = setInterval(setTimerBar, barDelay);
-    timerEndTime = Date.now() + slideDelay;
+    if(!isMouseOver && !isSwipe) {
+      slideDelay = Math.min(Math.abs(slideDelay), delay);
+      timerStepId = setInterval(setTimerSlide, slideDelay);
+      timerBarId = setInterval(setTimerBar, barDelay);
+      timerEndTime = Date.now() + slideDelay;
+    }
   }
 
   function swipeStart(evt) {
@@ -160,7 +158,6 @@ if (favoriteSectionElement !== null) {
     sliderTrack.style.transform = `translate3d(0px, 0px, 0px)`;
     sliderTrack.style.transition = `all 1s`;
   };
-
 
   setTimers();
 
