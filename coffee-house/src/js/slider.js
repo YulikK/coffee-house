@@ -90,14 +90,14 @@ if (favoriteSectionElement !== null) {
   }
 
   function setTimerBar() {
-    const barElement = document.querySelector('.manual-btn' + counter + ' progress');
-    const timeToEnd = timerEndTime - Date.now()
-    barElement.value = delay - timeToEnd;
+    const barElement = document.querySelector('.manual-btn' + counter + ' span');
+    const timeToEnd = timerEndTime - Date.now();
+    // barElement.value = delay - timeToEnd;
   }
 
   function resetTimerBar() {
-    const barElement = document.querySelector('.manual-btn' + counter + ' progress');
-    barElement.value = 0;
+    const barElement = document.querySelector('.manual-btn' + counter + ' span');
+    barElement.style.width = '0px';
   }
 
   function clearTimer(){
