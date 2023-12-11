@@ -127,15 +127,25 @@
   background: $color-border-light;
   cursor: pointer;
   transition: 1s;
-  span {
+  progress {
     content: "";
     display: block;
-    width: 0;
+    width: 100%;
     height: 4px;
     max-width: 40px;
     border-radius: 100px;
     box-sizing: border-box;
     background: $color-border-dark;
+  }
+  progress[value]::-webkit-progress-value {
+    background-color: $color-border-dark;
+    border-radius: 100px;
+    // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+  progress[value]::-webkit-progress-bar {
+    background: $color-border-light;
+    border-radius: 100px;
+    // box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
   }
 }
 

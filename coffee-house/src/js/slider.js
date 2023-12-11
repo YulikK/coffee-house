@@ -6,16 +6,16 @@ if (favoriteSectionElement !== null) {
   const afterBtn = document.querySelector('.slider__after');
   const sliderTrack = document.querySelector('.slides');
   const slides = document.querySelectorAll('.slider__card');
-  const slideWrapper = document.querySelectorAll('.slide');
+  const slideElement = document.querySelectorAll('.slide');
   const delay = 6000;
-  const barDelay = 50;
+  const barDelay = 10;
   const barMaxWidth = 40;
   let isMouseOver = false;
+  let isSwipe = false;
   let timerEndTime;
   let counter = 1;
   let timerStepId;
   let timerBarId;
-  // let slideIndex = 0;
   let currentXPosition = 0;
   let startXPosition = 0;
   let currentSlideTransform = 0;
@@ -36,6 +36,7 @@ if (favoriteSectionElement !== null) {
 
   function setSlide(newCounter) {
     isMouseOver = false;
+    isSwipe = false;
     resetTimerBar();
     counter = setCounter(newCounter);
     document.getElementById('radio' + counter).checked = true;
@@ -43,23 +44,18 @@ if (favoriteSectionElement !== null) {
     setTimers();
   }
 
-  function onSlideClick(evt) {
-    evt.preventDefault();
-  }
-
   function onSlideMouseOver(evt){
-    if (!isMouseOver) {
+    if (!isMouseOver && evt.currentTarget.classList.contains('slide') && evt.pointerType == 'mouse') {
       isMouseOver = true;
       setTimerPause();
-      evt.target.addEventListener('mouseleave', onSlideMouseOut);
+      evt.currentTarget.addEventListener('pointerleave', onSlideMouseOut);
     }
   }
   function onSlideMouseOut(evt){
-    if(evt.currentTarget.classList.contains('slider__card')) {
+    if(evt.currentTarget.classList.contains('slide')) {
       isMouseOver = false;
       stopTimerPause();
     }
-    // console.log(evt.currentTarget);
   }
   function onChangeSlide(evt){
     evt.preventDefault();
@@ -82,30 +78,33 @@ if (favoriteSectionElement !== null) {
   }
 
   function setTimerPause() {
-    clearTimer();
-    timerEndTime = timerEndTime - Date.now();
+    if(isSwipe || isMouseOver){
+      clearTimer();
+      timerEndTime = timerEndTime - Date.now();
+      timerEndTime = Math.min(Math.abs(timerEndTime), delay);
+      // console.log('setTimerPause ' + timerEndTime);
+    }
   }
   function stopTimerPause() {
     setTimers(timerEndTime);
   }
 
   function setTimerBar() {
-    const barElement = document.querySelector('.manual-btn' + counter + ' span');
-    let widthBar = barElement.style.width;
-    if(widthBar) {
-      widthBar = Number(widthBar.replace('px', ''));
-    }
-    barElement.style.width = widthBar + barMaxWidth / delay * barDelay + 'px';
+    const barElement = document.querySelector('.manual-btn' + counter + ' progress');
+    const timeToEnd = timerEndTime - Date.now()
+    barElement.value = delay - timeToEnd;
   }
 
   function resetTimerBar() {
-    const barElement = document.querySelector('.manual-btn' + counter + ' span');
-    barElement.style.width = '0px';
+    const barElement = document.querySelector('.manual-btn' + counter + ' progress');
+    barElement.value = 0;
   }
 
   function clearTimer(){
     clearInterval(timerStepId);
+    timerStepId = null;
     clearInterval(timerBarId);
+    timerBarId = null;
   }
 
   function setTimers(slideDelay = delay){
@@ -116,7 +115,9 @@ if (favoriteSectionElement !== null) {
   }
 
   function swipeStart(evt) {
+    evt.preventDefault();
     const eventTouch = (evt.type.search('touch') !== -1) ? evt.touches[0] : evt;
+    isSwipe = true;
 
     setTimerPause();
 
@@ -141,6 +142,7 @@ if (favoriteSectionElement !== null) {
   function swipeEnd() {
 
     endXPosition = currentXPosition - startXPosition;
+    isSwipe = false;
 
     document.removeEventListener('touchmove', swipeAction);
     document.removeEventListener('touchend', swipeEnd);
@@ -159,14 +161,14 @@ if (favoriteSectionElement !== null) {
     sliderTrack.style.transition = `all 1s`;
   };
 
+
   setTimers();
 
   sliderTrack.style.transform = 'translate3d(0px, 0px, 0px)';
 
   const inputElements = favoriteSectionElement.querySelectorAll('input[name="radio-btn"]');
   inputElements.forEach((inputElement) => inputElement.addEventListener(`change`, onChangeSlide));
-  slides.forEach((cardElement) => cardElement.addEventListener(`click`, onSlideClick));
-  slideWrapper.forEach((cardElement) => cardElement.addEventListener(`mouseover`, onSlideMouseOver));
+  slideElement.forEach((cardElement) => cardElement.addEventListener(`pointerover`, onSlideMouseOver));
   beforeBtn.addEventListener(`click`, onClickBeforeSlide);
   afterBtn.addEventListener(`click`, onClickAfterSlide);
   sliderTrack.addEventListener('touchstart', swipeStart);
