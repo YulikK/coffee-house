@@ -156,7 +156,7 @@ if (favoriteSectionElement !== null) {
     }
     
     sliderTrack.style.transform = `translate3d(0px, 0px, 0px)`;
-    sliderTrack.style.transition = `all 1s`;
+    sliderTrack.style.transition = `all 2s`;
   };
 
   setTimers();
