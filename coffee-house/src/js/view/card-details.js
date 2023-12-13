@@ -125,7 +125,7 @@ export default class MenuCardDetails extends AbstractView {
     .forEach((controlItem) => {
       newPrice += Number(controlItem.getAttribute('data-price-add'));
     });
-    this.getElement().querySelector(`.price__current`).textContent = '$' + newPrice;
+    this.getElement().querySelector(`.price__current`).textContent = '$' + newPrice.toFixed(2);
   }
 
   setCloseClickHandler(callback) {
