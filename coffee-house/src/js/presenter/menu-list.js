@@ -148,6 +148,7 @@ export default class MenuList {
   _clearMenuList() {
     this._menuListComponent.getElement().innerHTML = ``;
     this._renderedMenuCount = this._cardStep;
+    remove(this._showMoreButtonComponent);
   }
 
   _renderMenuList() {
